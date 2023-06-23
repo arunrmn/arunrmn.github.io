@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+}
+
+.passage {
+  margin-bottom: 20px;
+}
+
+.dropdown-container {
+  display: inline-block;
+}
+
+.result {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: yellow;
+}

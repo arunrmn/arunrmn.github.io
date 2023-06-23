@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Illustration of the Personalized Problem Translation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Illustration of the Personalized Problem Translation</h1>
+    <div class="passage">
+      <p><span id="blank1"></span></p>
+      <p><span id="blank2"></span></p>
+      <p><span id="blank3"></span></p>
+      <p><span id="blank4"></span></p>
+      <p><span id="blank5"></span></p>
+      <p><span id="blank6"></span></p>
+      <p><span id="blank7"></span></p>
+      <p><span id="blank8"></span></p>
+    </div>
+    <div class="dropdowns">
+      <select onchange="updateBlank(1, this.value)">
+        <option value="A program has a one-dimensional array of integers called iRainfall, which is used to record the rainfall each day.">A program has a one-dimensional array of integers called iRainfall, which is used to record the rainfall each day.</option>
+        <option value="एक कार्यक्रम में पूर्णांकों की एक आयामी सरणी होती है जिसे iRainfall कहा जाता है, जिसका उपयोग प्रत्येक दिन वर्षा को रिकॉर्ड करने के लिए किया जाता है।">एक कार्यक्रम में पूर्णांकों की एक आयामी सरणी होती है जिसे iRainfall कहा जाता है, जिसका उपयोग प्रत्येक दिन वर्षा को रिकॉर्ड करने के लिए किया जाता है।</option>
+        <option value="एक program में integers की one-dimensional array है जिसे iRainfall कहा जाता है, जिसका उपयोग प्रत्येक दिन rainfall को record करने के लिए किया जाता है।">एक program में integers की one-dimensional array है जिसे iRainfall कहा जाता है, जिसका उपयोग प्रत्येक दिन rainfall को record करने के लिए किया जाता है।</option>
+      </select>
+      <select onchange="updateBlank(2, this.value)">
+        <option value="For example, if iRainfall[0] is 15 and iRainfall[1] is 0, there was 15mm of rain on the first day and no rain on the second day.">For example, if iRainfall[0] is 15 and iRainfall[1] is 0, there was 15mm of rain on the first day and no rain on the second day.</option>
+        <option value="उदाहरण के लिए, यदि iRainfall [0] 15 है और iRainfall [1] 0 है, तो पहले दिन 15 मिमी बारिश हुई और दूसरे दिन बारिश नहीं हुई।">उदाहरण के लिए, यदि iRainfall [0] 15 है और iRainfall [1] 0 है, तो पहले दिन 15 मिमी बारिश हुई और दूसरे दिन बारिश नहीं हुई।</option>
+        <option value="Example के लिए, यदि iRainfall[0] 15 है और iRainfall[1] 0 है, तो पहले दिन 15mm बारिश हुई और दूसरे दिन बारिश नहीं हुई।">Example के लिए, यदि iRainfall[0] 15 है और iRainfall[1] 0 है, तो पहले दिन 15mm बारिश हुई और दूसरे दिन बारिश नहीं हुई।</option>
+      </select>
+      <select onchange="updateBlank(3, this.value)">
+        <option value="Negative rainfall values are data entry errors, and should be ignored.">Negative rainfall values are data entry errors, and should be ignored.</option>
+        <option value="नकारात्मक वर्षा मान डेटा प्रविष्टि त्रुटियाँ हैं, और इन्हें अनदेखा किया जाना चाहिए।">नकारात्मक वर्षा मान डेटा प्रविष्टि त्रुटियाँ हैं, और इन्हें अनदेखा किया जाना चाहिए।</option>
+        <option value="Negative rainfall values data entry errors हैं, और इन्हें ignore किया जाना चाहिए">Negative rainfall values data entry errors हैं, और इन्हें ignore किया जाना चाहिए</option>
+      </select>
+      <select onchange="updateBlank(4, this.value)">
+        <option value="A rainfall value of 9999 is used to indicate that no more rainfall figures have been registered beyond that element of the array; the last actual rainfall value recorded is in the element immediately before the 9999.">A rainfall value of 9999 is used to indicate that no more rainfall figures have been registered beyond that element of the array; the last actual rainfall value recorded is in the element immediately before the 9999.</option>
+        <option value="9999 के वर्षा मान का उपयोग यह इंगित करने के लिए किया जाता है कि सरणी के उस तत्व से अधिक वर्षा के आंकड़े दर्ज नहीं किए गए हैं; रिकॉर्ड किया गया अंतिम वास्तविक वर्षा मान 9999 से ठीक पहले तत्व में है।">9999 के वर्षा मान का उपयोग यह इंगित करने के लिए किया जाता है कि सरणी के उस तत्व से अधिक वर्षा के आंकड़े दर्ज नहीं किए गए हैं; रिकॉर्ड किया गया अंतिम वास्तविक वर्षा मान 9999 से ठीक पहले तत्व में है।</option>
+        <option value="9999 के rainfall value का उपयोग यह indicate करने के लिए किया जाता है की array के उस element के बाद के rainfall के figures दर्ज नहीं किए गए हैं; record किया गया अंतिम actual rainfall value 9999 से ठीक पहले element में है।">9999 के rainfall value का उपयोग यह indicate करने के लिए किया जाता है की array के उस element के बाद के rainfall के figures दर्ज नहीं किए गए हैं; record किया गया अंतिम actual rainfall value 9999 से ठीक पहले element में है।</option>
+      </select>
+      <select onchange="updateBlank(5, this.value)">
+        <option value="The number of days represented in the array is open-ended: it might be just a few days, or even none; it might be a month; it might be several years.">The number of days represented in the array is open-ended: it might be just a few days, or even none; it might be a month; it might be several years.</option>
+        <option value="सरणी में दर्शाए गए दिनों की संख्या ओपन-एंडेड है: यह केवल कुछ दिन हो सकता है, या यहां तक कि कोई भी नहीं; यह एक महीना हो सकता है; यह कई साल हो सकता है।">सरणी में दर्शाए गए दिनों की संख्या ओपन-एंडेड है: यह केवल कुछ दिन हो सकता है, या यहां तक कि कोई भी नहीं; यह एक महीना हो सकता है; यह कई साल हो सकता है।</option>
+        <option value="array में represented दिनों की संख्या open-ended है: यह केवल कुछ दिन हो सकता है, या यहां तक कि कोई भी नहीं; यह एक महीना हो सकता है; यह कई साल हो सकता है।">array में represented दिनों की संख्या open-ended है: यह केवल कुछ दिन हो सकता है, या यहां तक कि कोई भी नहीं; यह एक महीना हो सकता है; यह कई साल हो सकता है।</option>
+      </select>
+      <select onchange="updateBlank(6, this.value)">
+        <option value="The number of days is determined solely by the location in the array of the 9999 entry.">The number of days is determined solely by the location in the array of the 9999 entry.</option>
+        <option value="दिनों की संख्या पूरी तरह से 9999 प्रविष्टि की सरणी में स्थान द्वारा निर्धारित की जाती है।">दिनों की संख्या पूरी तरह से 9999 प्रविष्टि की सरणी में स्थान द्वारा निर्धारित की जाती है।</option>
+        <option value="दिनों की संख्या पूरी तरह से 9999 entry का array में स्थान द्वारा determine की जाती है। ">दिनों की संख्या पूरी तरह से 9999 entry का array में स्थान द्वारा determine की जाती है। </option>
+      </select>
+      <select onchange="updateBlank(7, this.value)">
+        <option value="Write a function method to find and return the average rainfall over all the days represented in the array.">Write a function method to find and return the average rainfall over all the days represented in the array.</option>
+        <option value="सरणी में दर्शाए गए सभी दिनों में औसत वर्षा को खोजने और वापस करने के लिए एक फ़ंक्शन विधि लिखें।">सरणी में दर्शाए गए सभी दिनों में औसत वर्षा को खोजने और वापस करने के लिए एक फ़ंक्शन विधि लिखें।</option>
+        <option value="Array में represent किए गए सभी दिनों में average rainfall  को खोजने और return करने के लिए एक function method लिखें। ">Array में represent किए गए सभी दिनों में average rainfall  को खोजने और return करने के लिए एक function method लिखें। </option>
+      </select>
+      <select onchange="updateBlank(8, this.value)">
+        <option value="A day with negative rainfall is still counted as a day, but with a rainfall of zero.">A day with negative rainfall is still counted as a day, but with a rainfall of zero.</option>
+        <option value="नकारात्मक वर्षा वाला दिन अभी भी एक दिन के रूप में गिना जाता है, लेकिन शून्य वर्षा के साथ।">नकारात्मक वर्षा वाला दिन अभी भी एक दिन के रूप में गिना जाता है, लेकिन शून्य वर्षा के साथ।</option>
+        <option value="Negative rainfall वाला दिन अभी भी एक दिन के रूप में count किया जाता है, लेकिन zero rainfall के साथ। ">Negative rainfall वाला दिन अभी भी एक दिन के रूप में count किया जाता है, लेकिन zero rainfall के साथ। </option>
+      </select>
+    </div>
+    <div class="result">
+      <p id="resultText"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
